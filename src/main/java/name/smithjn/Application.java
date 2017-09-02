@@ -11,8 +11,13 @@ public class Application {
 
         ApplicationContext applicationContext = new AnnotationConfigApplicationContext(AppConfig.class);
 
-        CustomerService service = applicationContext.getBean("customerService", CustomerService.class);
 
-        System.out.println(service.findAll().get(0).getFirstname());
+        for (int i = 0; i < 5; i++) {
+            CustomerService service = applicationContext.getBean("customerService", CustomerService.class);
+
+            System.out.println(service);
+
+            System.out.println(service.findAll().get(0).getFirstname());
+        }
     }
 }
