@@ -11,8 +11,7 @@ public class Application {
 
         ApplicationContext applicationContext = new AnnotationConfigApplicationContext(AppConfig.class);
 
-
-        for (int i = 0; i < 5; i++) {
+        for (int i = 0; i < 2; i++) {
             CustomerService service = applicationContext.getBean("customerService", CustomerService.class);
 
             System.out.println(service);
